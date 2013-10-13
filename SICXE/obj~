@@ -1,0 +1,550 @@
+OPCODE: STL
+OPCODE: LDB
+Found format 4 JSUB
+OPCODE: JSUB
+OPCODE: LDA
+OPCODE: COMP
+OPCODE: JEQ
+Found format 4 JSUB
+OPCODE: JSUB
+OPCODE: J
+OPCODE: LDA
+OPCODE: STA
+OPCODE: LDA
+OPCODE: STA
+Found format 4 JSUB
+OPCODE: JSUB
+OPCODE: J
+OPCODE: CLEAR
+OPCODE: CLEAR
+OPCODE: CLEAR
+Found format 4 LDT
+OPCODE: LDT
+OPCODE: TD
+OPCODE: JEQ
+OPCODE: RD
+OPCODE: COMPR
+OPCODE: JEQ
+OPCODE: STCH
+OPCODE: TIXR
+OPCODE: JLT
+OPCODE: STX
+OPCODE: RSUB
+OPCODE: CLEAR
+OPCODE: LDT
+OPCODE: TD
+OPCODE: JEQ
+OPCODE: LDCH
+OPCODE: WD
+OPCODE: TIXR
+OPCODE: JLT
+OPCODE: RSUB
+headerecord
+Text record1: T000000
+First Text Record: T000000
+0000 FIRST STL RETADR
+Half assembled: 17
+#48 3 45
+three assembled: 172 3 48
+assembled :17202D
+
+
+0003  LDB #LENGTH
+Half assembled: 69
+#51 6 45
+three assembled: 692 6 51
+assembled :69202D
+
+
+
+
+0006 CLOOP JSUB EOF
+Half assembled: 4B
+assembled :4B0002D
+
+
+000A  LDA LENGTH
+Half assembled: 03
+#51 13 38
+three assembled: 032 13 51
+assembled :032026
+
+
+000D  COMP #0
+Half assembled: 29
+assembled :290000
+
+
+0010  JEQ ENDFIL
+Half assembled: 33
+#26 19 7
+three assembled: 332 19 26
+assembled :332007
+
+
+0013  JSUB WRREC
+Half assembled: 4B
+assembled :4B0105D
+
+
+0017  J CLOOP
+Half assembled: 3F
+#6 26 -20
+three assembled: 3F2 26 6
+assembled :3F2FEC
+
+
+001A ENDFIL LDA EOF
+Half assembled: 03
+#45 29 16
+three assembled: 032 29 45
+assembled :032010
+
+
+001D  STA BUFFER
+Half assembled: 0F
+#54 32 22
+three assembled: 0F2 32 54
+assembled :0F2016
+
+
+0020  LDA #3
+Half assembled: 01
+assembled :010003
+
+
+0023  STA LENGTH
+Half assembled: 0F
+#51 38 13
+three assembled: 0F2 38 51
+assembled :0F200D
+
+
+0026  JSUB EOF
+Half assembled: 4B
+assembled :4B0002D
+
+
+002A  J @RETADR
+Half assembled: 3E
+#48 45 3
+three assembled: 3E2 45 48
+assembled :3E2003
+
+
+
+
+
+
+
+
+
+
+1036 RDREC CLEAR X
+
+
+1038  CLEAR A
+
+
+103A  CLEAR S
+
+
+103C  LDT #4096
+Half assembled: 75
+assembled :75
+
+
+1040 RLOOP TD INPUT
+Half assembled: E3
+#4188 4163 25
+three assembled: E32 4163 4188
+assembled :E32019
+
+
+1043  JEQ RLOOP
+Half assembled: 33
+#4160 4166 -6
+three assembled: 332 4166 4160
+assembled :332FFA
+
+
+1046  RD INPUT
+Half assembled: DB
+#4188 4169 19
+three assembled: DB2 4169 4188
+assembled :DB2013
+
+
+1049  COMPR A,S
+
+
+104B  JEQ EXIT
+Half assembled: 33
+#4182 4174 8
+three assembled: 332 4174 4182
+assembled :332008
+
+
+104E  STCH BUFFER,X
+Half assembled: 57
+#54 4177 -4123
+base 54 51 3
+assembled :57C003
+
+
+1051  TIXR T
+
+
+1053  JLT RLOOP
+Half assembled: 3B
+#4160 4182 -22
+three assembled: 3B2 4182 4160
+assembled :3B2FEA
+
+
+1056 EXIT STX LENGTH
+Half assembled: 13
+#51 4185 -4134
+base 51 51 0
+assembled :134000
+
+
+1059  RSUB 
+Half assembled: 4F
+#0 4188 -4188
+assembled :4F
+
+
+
+
+105D WRREC CLEAR X
+
+
+105F  LDT LENGTH
+Half assembled: 77
+#51 4194 -4143
+base 51 51 0
+assembled :774000
+
+
+1062 WLOOP TD OUTPUT
+Half assembled: E3
+#4214 4197 17
+three assembled: E32 4197 4214
+assembled :E32011
+
+
+1065  JEQ WLOOP
+Half assembled: 33
+#4194 4200 -6
+three assembled: 332 4200 4194
+assembled :332FFA
+
+
+1068  LDCH BUFFER,X
+Half assembled: 53
+#54 4203 -4149
+base 54 51 3
+assembled :53C003
+
+
+106B  WD OUTPUT
+Half assembled: DF
+#4214 4206 8
+three assembled: DF2 4206 4214
+assembled :DF2008
+
+
+106E  TIXR T
+
+
+1070  JLT WLOOP
+Half assembled: 3B
+#4194 4211 -17
+three assembled: 3B2 4211 4194
+assembled :3B2FEF
+
+
+1073  RSUB 
+Half assembled: 4F
+#0 4214 -4214
+assembled :4F
+
+
+
+
+OPCODE: STL
+OPCODE: LDB
+Found format 4 JSUB
+OPCODE: JSUB
+OPCODE: LDA
+OPCODE: COMP
+OPCODE: JEQ
+Found format 4 JSUB
+OPCODE: JSUB
+OPCODE: J
+OPCODE: LDA
+OPCODE: STA
+OPCODE: LDA
+OPCODE: STA
+Found format 4 JSUB
+OPCODE: JSUB
+OPCODE: J
+OPCODE: CLEAR
+OPCODE: CLEAR
+OPCODE: CLEAR
+Found format 4 LDT
+OPCODE: LDT
+OPCODE: TD
+OPCODE: JEQ
+OPCODE: RD
+OPCODE: COMPR
+OPCODE: JEQ
+OPCODE: STCH
+OPCODE: TIXR
+OPCODE: JLT
+OPCODE: STX
+OPCODE: RSUB
+OPCODE: CLEAR
+OPCODE: LDT
+OPCODE: TD
+OPCODE: JEQ
+OPCODE: LDCH
+OPCODE: WD
+OPCODE: TIXR
+OPCODE: JLT
+OPCODE: RSUB
+headerecord
+Text record1: T000000
+First Text Record: T000000
+0000 FIRST STL RETADR
+Half assembled: 17
+#48 3 45
+three assembled: 172 3 48
+assembled :17202D
+
+
+0003  LDB #LENGTH
+Half assembled: 69
+#51 6 45
+three assembled: 692 6 51
+assembled :69202D
+
+
+
+
+0006 CLOOP JSUB RDREC
+Half assembled: 4B
+assembled :4B01036
+
+
+000A  LDA LENGTH
+Half assembled: 03
+#51 13 38
+three assembled: 032 13 51
+assembled :032026
+
+
+000D  COMP #0
+Half assembled: 29
+assembled :290000
+
+
+0010  JEQ ENDFIL
+Half assembled: 33
+#26 19 7
+three assembled: 332 19 26
+assembled :332007
+
+
+0013  JSUB WRREC
+Half assembled: 4B
+assembled :4B0105D
+
+
+0017  J CLOOP
+Half assembled: 3F
+#6 26 -20
+three assembled: 3F2 26 6
+assembled :3F2FEC
+
+
+001A ENDFIL LDA EOF
+Half assembled: 03
+#45 29 16
+three assembled: 032 29 45
+assembled :032010
+
+
+001D  STA BUFFER
+Half assembled: 0F
+#54 32 22
+three assembled: 0F2 32 54
+assembled :0F2016
+
+
+0020  LDA #3
+Half assembled: 01
+assembled :010003
+
+
+0023  STA LENGTH
+Half assembled: 0F
+#51 38 13
+three assembled: 0F2 38 51
+assembled :0F200D
+
+
+0026  JSUB EOF
+Half assembled: 4B
+assembled :4B0002D
+
+
+002A  J @RETADR
+Half assembled: 3E
+#48 45 3
+three assembled: 3E2 45 48
+assembled :3E2003
+
+
+
+
+
+
+
+
+
+
+1036 RDREC CLEAR X
+
+
+1038  CLEAR A
+
+
+103A  CLEAR S
+
+
+103C  LDT #4096
+Half assembled: 75
+assembled :75
+
+
+1040 RLOOP TD INPUT
+Half assembled: E3
+#4188 4163 25
+three assembled: E32 4163 4188
+assembled :E32019
+
+
+1043  JEQ RLOOP
+Half assembled: 33
+#4160 4166 -6
+three assembled: 332 4166 4160
+assembled :332FFA
+
+
+1046  RD INPUT
+Half assembled: DB
+#4188 4169 19
+three assembled: DB2 4169 4188
+assembled :DB2013
+
+
+1049  COMPR A,S
+
+
+104B  JEQ EXIT
+Half assembled: 33
+#4182 4174 8
+three assembled: 332 4174 4182
+assembled :332008
+
+
+104E  STCH BUFFER,X
+Half assembled: 57
+#54 4177 -4123
+base 54 51 3
+assembled :57C003
+
+
+1051  TIXR T
+
+
+1053  JLT RLOOP
+Half assembled: 3B
+#4160 4182 -22
+three assembled: 3B2 4182 4160
+assembled :3B2FEA
+
+
+1056 EXIT STX LENGTH
+Half assembled: 13
+#51 4185 -4134
+base 51 51 0
+assembled :134000
+
+
+1059  RSUB 
+Half assembled: 4F
+#0 4188 -4188
+assembled :4F
+
+
+
+
+105D WRREC CLEAR X
+
+
+105F  LDT LENGTH
+Half assembled: 77
+#51 4194 -4143
+base 51 51 0
+assembled :774000
+
+
+1062 WLOOP TD OUTPUT
+Half assembled: E3
+#4214 4197 17
+three assembled: E32 4197 4214
+assembled :E32011
+
+
+1065  JEQ WLOOP
+Half assembled: 33
+#4194 4200 -6
+three assembled: 332 4200 4194
+assembled :332FFA
+
+
+1068  LDCH BUFFER,X
+Half assembled: 53
+#54 4203 -4149
+base 54 51 3
+assembled :53C003
+
+
+106B  WD OUTPUT
+Half assembled: DF
+#4214 4206 8
+three assembled: DF2 4206 4214
+assembled :DF2008
+
+
+106E  TIXR T
+
+
+1070  JLT WLOOP
+Half assembled: 3B
+#4194 4211 -17
+three assembled: 3B2 4211 4194
+assembled :3B2FEF
+
+
+1073  RSUB 
+Half assembled: 4F
+#0 4214 -4214
+assembled :4F
+
+
+
+

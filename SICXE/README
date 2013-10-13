@@ -1,0 +1,10 @@
+NAME: KISHOR MOHITE
+BRANCH: CSE 2nd YEAR
+ENROLMENT NO.: 12114041
+SIC/XE assembler
+1] to assemble the input file run ./a.out [FILENAME]
+2] in input file coloumns are expected to be separated by tabs
+
+FEATURES
+1]generates header record, text record, end record and modification record
+2]supports for literals and expressions
